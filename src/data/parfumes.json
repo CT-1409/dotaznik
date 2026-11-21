@@ -1,0 +1,96 @@
+{
+  "options": {
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter",
+      "All year"
+    ],
+    "daytime": [
+      "Day",
+      "Evening"
+    ],
+    "event": [
+      "Casual",
+      "Formal"
+    ],
+    "notes": [
+      "Bergamot",
+      "Calabrian bergamot",
+      "Citron",
+      "Sicilian Orange",
+      "Oud",
+      "Roses"
+    ]
+  },
+  "perfumes": [
+    {
+      "id": 1,
+      "name": "Louis Vuitton Ombre Nomade",
+      "brand": "Louis Vuitton",
+      "season": [
+        "Autumn",
+        "Winter"
+      ],
+      "daytime": [
+        "Evening"
+      ],
+      "event": [
+        "Formal",
+        "Romantic evening"
+      ],
+      "notes": [
+        "Oud",
+        "Roses"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Louis Vuitton Imagination",
+      "brand": "Louis Vuitton",
+      "season": [
+        "Summer",
+        "Spring"
+      ],
+      "daytime": [
+        "Day"
+      ],
+      "event": [
+        "Casual",
+        "Everyday",
+        "Beach",
+        "Gym",
+        "Hangouts"
+      ],
+      "notes": [
+        "Citron",
+        "Calabrian bergamot",
+        "Sicilian Orange"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Dior Sauvage Eau de Parfum",
+      "brand": "Dior",
+      "season": [
+        "All year"
+      ],
+      "daytime": [
+        "Day",
+        "Evening"
+      ],
+      "event": [
+        "Everyday",
+        "Formal",
+        "Casual",
+        "Gym",
+        "Hangouts",
+        "Romantic evening"
+      ],
+      "notes": [
+        "Bergamot"
+      ]
+    }
+  ]
+}
