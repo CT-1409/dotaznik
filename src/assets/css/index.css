@@ -272,6 +272,7 @@ header a:focus-visible {
     min-height: 72px;
     padding: 12px 16px;
     gap: 12px;
+    flex-wrap: wrap;
   }
 
   .site-brand {
@@ -289,9 +290,50 @@ header a:focus-visible {
     font-size: 0.82rem;
   }
 
+  main {
+    width: calc(100% - 32px);
+    margin-top: clamp(48px, 10vh, 96px);
+  }
+
+  main h2 {
+    font-size: clamp(2.2rem, 11vw, 3.5rem);
+  }
+
   .questionnaire {
     width: calc(100% - 28px);
-    margin-top: 32px;
+    margin: 32px auto;
+  }
+
+  .questionnaire form > div {
+    padding: clamp(18px, 6vw, 28px);
+  }
+
+  .questionnaire h2 {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+
+  .questionnaire-navigation {
+    margin-top: 20px;
+  }
+
+  .questionnaire-navigation button {
+    width: auto;
+  }
+
+  .questionnaire .match-list li {
+    grid-template-columns: minmax(0, 1fr) 76px;
+    padding: 12px;
+  }
+
+  .questionnaire .match-list img {
+    width: 76px;
+    height: 76px;
+  }
+
+  .questionnaire > form > div > button {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
   }
 
   .questionnaire li {
@@ -300,6 +342,7 @@ header a:focus-visible {
 
   .questionnaire button {
     width: 100%;
+    min-height: 48px;
     text-align: left;
   }
 }
