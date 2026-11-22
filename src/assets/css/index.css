@@ -270,14 +270,15 @@ header a:focus-visible {
 @media (max-width: 520px) {
   header.site-header {
     min-height: 72px;
-    padding: 12px 16px;
-    gap: 12px;
-    flex-wrap: wrap;
+    padding: 10px 12px;
+    gap: 8px;
+    flex-wrap: nowrap;
   }
 
   .site-brand {
     gap: 7px;
-    font-size: 1.08rem;
+    font-size: 1rem;
+    white-space: nowrap;
   }
 
   .site-brand img {
@@ -286,8 +287,14 @@ header a:focus-visible {
   }
 
   header nav ul {
-    gap: 12px;
-    font-size: 0.82rem;
+    gap: 8px;
+    font-size: 0.78rem;
+  }
+
+  header nav a {
+    display: block;
+    padding: 8px 0;
+    white-space: nowrap;
   }
 
   main {
@@ -316,10 +323,6 @@ header a:focus-visible {
     margin-top: 20px;
   }
 
-  .questionnaire-navigation button {
-    width: auto;
-  }
-
   .questionnaire .match-list li {
     grid-template-columns: minmax(0, 1fr) 76px;
     padding: 12px;
@@ -331,6 +334,7 @@ header a:focus-visible {
   }
 
   .questionnaire > form > div > button {
+    display: block;
     width: 100%;
     margin-top: 10px;
     text-align: center;
@@ -344,5 +348,9 @@ header a:focus-visible {
     width: 100%;
     min-height: 48px;
     text-align: left;
+  }
+
+  .questionnaire-navigation button {
+    width: auto;
   }
 }
