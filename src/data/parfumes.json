@@ -29,6 +29,7 @@
       "id": 1,
       "name": "Louis Vuitton Ombre Nomade",
       "brand": "Louis Vuitton",
+      "image": "Louis_Vuitton_Ombre_Nomade.png",
       "season": [
         "Autumn",
         "Winter"
@@ -49,6 +50,7 @@
       "id": 2,
       "name": "Louis Vuitton Imagination",
       "brand": "Louis Vuitton",
+      "image": "Louis_Vuitton_Imagination.png",
       "season": [
         "Summer",
         "Spring"
@@ -73,6 +75,7 @@
       "id": 3,
       "name": "Dior Sauvage Eau de Parfum",
       "brand": "Dior",
+      "image": "Dior_Sauvage_Eau_de_Parfum.png",
       "season": [
         "All year"
       ],

@@ -184,17 +184,32 @@ main button:hover,
   gap: 10px;
 }
 
+.questionnaire-navigation {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 24px;
+}
+
 .questionnaire .match-list {
   display: grid;
   gap: 10px;
 }
 
 .questionnaire .match-list li {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 96px;
+  align-items: center;
   padding: 14px 16px;
   border: 1px solid var(--line);
   border-radius: 12px;
   background: var(--surface);
+}
+
+.questionnaire .match-list img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  justify-self: end;
 }
 
 .questionnaire button {
