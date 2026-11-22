@@ -1,0 +1,290 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #24211f;
+  background: #f7f5f1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --page: #f7f5f1;
+  --surface: #fffefa;
+  --surface-hover: #f2eee7;
+  --ink: #24211f;
+  --muted: #716b63;
+  --accent: #a76d3e;
+  --line: #e7e0d6;
+  --radius: 18px;
+  --shadow: 0 18px 50px rgb(46 36 27 / 9%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, #fffefa 0, transparent 55%),
+    var(--page);
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+header.site-header {
+  width: 100%;
+  min-height: 82px;
+  margin: 0;
+  padding: 14px max(24px, calc((100% - 1120px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #16315b;
+  color: #fff;
+  box-shadow: 0 6px 24px rgb(22 49 91 / 16%);
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+.site-brand img {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+header nav ul {
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header.site-header a {
+  color: rgb(255 255 255 / 88%);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+header.site-header a:hover {
+  color: #fff;
+}
+
+header.site-header a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+main {
+  width: min(760px, calc(100% - 48px));
+  margin: clamp(72px, 16vh, 160px) auto 64px;
+  text-align: center;
+}
+
+main h2 {
+  margin: 0 0 20px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 8vw, 5rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+main p {
+  max-width: 620px;
+  margin: 0 auto 32px;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  line-height: 1.8;
+}
+
+main button,
+.questionnaire button {
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 13px 22px;
+  background: var(--ink);
+  color: #fffefa;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+main button:hover,
+.questionnaire button:hover {
+  transform: translateY(-2px);
+  background: #40372f;
+  box-shadow: 0 8px 20px rgb(36 33 31 / 14%);
+}
+
+.questionnaire {
+  width: min(680px, calc(100% - 40px));
+  margin: clamp(40px, 10vh, 100px) auto;
+}
+
+.questionnaire form > div {
+  padding: clamp(24px, 6vw, 48px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  animation: card-enter 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.questionnaire h1 {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.questionnaire ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.questionnaire h2 {
+  margin: 0 0 28px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 5vw, 2.45rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.questionnaire li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.questionnaire .match-list {
+  display: grid;
+  gap: 10px;
+}
+
+.questionnaire .match-list li {
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.questionnaire button {
+  border-color: var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  animation: option-enter 320ms ease both;
+}
+
+.questionnaire button:hover {
+  border-color: #c9b9a6;
+  background: var(--surface-hover);
+  box-shadow: 0 6px 16px rgb(36 33 31 / 8%);
+}
+
+.questionnaire button:focus-visible,
+main button:focus-visible,
+header a:focus-visible {
+  outline: 3px solid rgb(167 109 62 / 40%);
+  outline-offset: 3px;
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes option-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 520px) {
+  header.site-header {
+    min-height: 72px;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .site-brand {
+    gap: 7px;
+    font-size: 1.08rem;
+  }
+
+  .site-brand img {
+    width: 32px;
+    height: 32px;
+  }
+
+  header nav ul {
+    gap: 12px;
+    font-size: 0.82rem;
+  }
+
+  .questionnaire {
+    width: calc(100% - 28px);
+    margin-top: 32px;
+  }
+
+  .questionnaire li {
+    flex-direction: column;
+  }
+
+  .questionnaire button {
+    width: 100%;
+    text-align: left;
+  }
+}
